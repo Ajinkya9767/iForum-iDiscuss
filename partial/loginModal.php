@@ -11,7 +11,7 @@
                 <h5 class="modal-title" id="loginModalLabel">Login to iDiscuss</h5>
                 <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
             </div>
-            <form action="/php_tutorial/Forum/partial/_handleloginModal.php" method="POST"> 
+            <form action="/iForum-iDiscuss/partial/_handleloginModal.php" method="POST"> 
             <div class="modal-body">
                 <div class="mb-3">
                     <label for="loginEmail" class="form-label">Email address</label>

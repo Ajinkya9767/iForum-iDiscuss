@@ -32,7 +32,7 @@
                 $result = mysqli_query($conn, $sql);
                 if($result){
                     $showAlert = true;
-                    header("location: http://localhost/php_tutorial/Forum/index.php?signupsuccess=true");
+                    header("location: http://localhost/iForum-iDiscuss/index.php?signupsuccess=true");
                     exit();
                 }
             }
@@ -40,7 +40,7 @@
                 $showError = "Password do not match!";
             }
         }
-        header("location: http://localhost/php_tutorial/Forum/index.php?signupsuccess=false&error=$showError");
+        header("location: http://localhost/iForum-iDiscuss/index.php?signupsuccess=false&error=$showError");
     }
 ?>
 

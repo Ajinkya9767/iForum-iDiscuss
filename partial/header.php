@@ -2,17 +2,17 @@
   echo '
     <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
       <div class="container-fluid">
-        <a class="navbar-brand" href="http://localhost/php_tutorial/Forum">iDiscuss</a>
+        <a class="navbar-brand">iDiscuss</a>
         <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
           <span class="navbar-toggler-icon"></span>
         </button>
         <div class="collapse navbar-collapse" id="navbarSupportedContent">
           <ul class="navbar-nav me-auto mb-2 mb-lg-0">
             <li class="nav-item">
-              <a class="nav-link active" aria-current="page" href="http://localhost/php_tutorial/Forum/index.php">Home</a>
+              <a class="nav-link active" aria-current="page" href="http://localhost/iForum-iDiscuss/index.php">Home</a>
             </li>
             <li class="nav-item">
-              <a class="nav-link active" href="http://localhost/php_tutorial/Forum/about.php">About</a>
+              <a class="nav-link active" href="http://localhost/iForum-iDiscuss/about.php">About</a>
             </li>
             <li class="nav-item dropdown">
               <a class="nav-link dropdown-toggle active" href="#" id="navbarDropdown" role="button" data-bs-toggle="dropdown" aria-expanded="false">
@@ -24,7 +24,7 @@
 
 <?php
   include '_dbConnect.php';
-  $sql = "select * from categories";
+  $sql = "select * from categories order by (category_name)";
   $result = mysqli_query($conn, $sql);
 
   while ($row = mysqli_fetch_assoc($result)) {
@@ -49,7 +49,7 @@
               </ul>
             </li>
             <li class="nav-item">
-              <a class="nav-link active" href="http://localhost/php_tutorial/Forum/contact.php">Contact</a>
+              <a class="nav-link active" href="http://localhost/iForum-iDiscuss/contact.php">Contact</a>
             </li>
           </ul>
   ';
@@ -62,7 +62,7 @@
               <img class="abc mx-2" src="images/user4.png" width="40px" alt="...">
               <p class="text-light my-2 mx-0">'.$_SESSION['firstname'].'</p>
               <div class="mx-2">
-                <a href="http://localhost/php_tutorial/Forum/partial/_logout.php" class="btn btn-outline-success">Logout</a>
+                <a href="http://localhost/iForum-iDiscuss/partial/_logout.php" class="btn btn-outline-success">Logout</a>
               </div>
             </form>
           ';

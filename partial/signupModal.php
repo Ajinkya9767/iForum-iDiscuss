@@ -12,7 +12,7 @@
                 <h5 class="modal-title" id="signupModalLabel">SignUp to iDiscuss</h5>
                 <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
             </div>
-            <form action="/php_tutorial/Forum/partial/_handleSignupModal.php" method="POST">
+            <form action="/iForum-iDiscuss/partial/_handleSignupModal.php" method="POST">
             <div class="modal-body">
                 <div class="mb-3">
                     <label for="signupFirstname" class="form-label">Firstname</label>

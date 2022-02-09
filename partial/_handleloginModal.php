@@ -16,24 +16,25 @@
             $firstname = $row['firstname'];
             $lastname = $row['lastname'];
             $userid = $row['id'];
-            if(password_verify($password, $row['password'])){
+            $pass = $row['password'];
+            if(password_verify($password,$pass)){
                 session_start();
                 $_SESSION['loggedIn'] = true;
                 $_SESSION['firstname'] = $firstname;
                 $_SESSION['lastname'] = $lastname;
                 $_SESSION['userid'] = $userid;
-                header("location: http://localhost/php_tutorial/Forum/index.php?loginsuccess=true");
+                header("location: http://localhost/iForum-iDiscuss/index.php?loginsuccess=true");
                 exit();
             }
             else{
                 $showError = "Password is Invalid! Please enter valid password.";
-                header("location: http://localhost/php_tutorial/Forum/index.php?loginsuccess=false&error=$showError");
+                header("location: http://localhost/iForum-iDiscuss/index.php?loginsuccess=false&error=$showError");
                 exit();
             }
         }
         else{
             $showError = "Username is Invalid! Please enter valid username.";
-            header("location: http://localhost/php_tutorial/Forum/index.php?loginsuccess=false&error=$showError");
+            header("location: http://localhost/iForum-iDiscuss/index.php?loginsuccess=false&error=$showError");
         }
     }
 ?>
