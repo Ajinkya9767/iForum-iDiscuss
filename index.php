@@ -34,7 +34,7 @@
 
       <!-- Fetch all the categories -->
       <?php
-        $sql = "select * from categories";
+        $sql = "select * from categories order by (category_name)";
         $result = mysqli_query($conn,$sql);
 
         while($row = mysqli_fetch_assoc($result)){

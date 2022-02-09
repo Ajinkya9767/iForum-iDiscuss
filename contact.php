@@ -91,7 +91,7 @@
               <img src="images/map.jpg" style="width:100%">
             </div> 
             <div class="column">
-              <form action="http://localhost/php_tutorial/Forum/contact.php" method="POST">
+              <form action="http://localhost/iForum-iDiscuss/contact.php" method="POST">
                 <label for="fname">First Name</label>
                 <input type="text" id="fname" name="firstname" value="'.$firstname.'">
                 

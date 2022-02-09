@@ -90,7 +90,7 @@
                     </a>
                     <div class="collapse" id="collapseExample">
                     <h1 class="my-4">Ask a Question</h1>
-                    <form method="POST" action="http://localhost/php_tutorial/Forum/threads.php?catid='.$catid.'" ?>
+                    <form method="POST" action="http://localhost/iForum-iDiscuss/threads.php?catid='.$catid.'" ?>
                         <div class="mb-3">
                             <label for="exampleInputEmail1" class="form-label">Thread Title</label>
                             <input type="text" class="form-control" name="title" id="title" aria-describedby="emailHelp" required>
@@ -135,7 +135,7 @@
                 $threadname = $row['thread_title'];
                 $threaddesc = $row['thread_desc'];
                 $threadid = $row['thread_id'];
-                $date = $row['thread_time'];
+                $date = $row['thread_created'];
                 echo '
                     <div class="d-flex my-3">
                     <div class="flex-shrink-0">
